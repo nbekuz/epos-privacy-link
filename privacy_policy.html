@@ -7,6 +7,14 @@
   <style>
     :root { --brand: #0ABAB5; --text: #1a1a1a; --muted: #555; }
     body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; color: var(--text); line-height: 1.55; font-size: 15px; }
+    .site-header { background: #fff; border-bottom: 1px solid #e6ebef; position: sticky; top: 0; z-index: 20; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+    .nav-inner { max-width: 42rem; margin: 0 auto; padding: 0.55rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; text-decoration: none; color: inherit; }
+    .brand img { height: 34px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 0.25rem 1.1rem; flex-wrap: wrap; }
+    .nav-links a { color: var(--text); text-decoration: none; font-size: 0.9rem; padding: 0.35rem 0; border-bottom: 2px solid transparent; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-links a[aria-current="page"] { color: var(--brand); font-weight: 600; border-bottom-color: var(--brand); }
     .wrap { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1.5rem 2.5rem; }
     h1 { font-size: 1.35rem; margin: 0 0 0.5rem; }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
@@ -19,6 +27,15 @@
   </style>
 </head>
 <body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="ЭПОС — на главную"><img src="assets/logo.png" alt="ЭПОС" width="120" height="34"></a>
+      <nav class="nav-links" aria-label="Документы">
+        <a href="/">Условия использования</a>
+        <a href="privacy_policy.html" aria-current="page">Политика конфиденциальности</a>
+      </nav>
+    </div>
+  </header>
   <div class="wrap">
     <h1>Политика конфиденциальности</h1>
     <p class="meta">Мобильное приложение «ЭПОС» (мониторинг электрического погрузчика). Документ актуален по состоянию на 13 мая 2026 г.</p>
