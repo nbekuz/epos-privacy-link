@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support URL — мобильное приложение «ЭПОС»</title>
+  <style>
+    :root { --brand: #0ABAB5; --text: #1a1a1a; --muted: #555; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; color: var(--text); line-height: 1.55; font-size: 15px; }
+    .site-header { background: #fff; border-bottom: 1px solid #e6ebef; position: sticky; top: 0; z-index: 20; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
+    .nav-inner { max-width: 42rem; margin: 0 auto; padding: 0.55rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; text-decoration: none; color: inherit; }
+    .brand img { height: 34px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 0.25rem 1.1rem; flex-wrap: wrap; }
+    .nav-links a { color: var(--text); text-decoration: none; font-size: 0.9rem; padding: 0.35rem 0; border-bottom: 2px solid transparent; }
+    .nav-links a:hover { color: var(--brand); }
+    .nav-links a[aria-current="page"] { color: var(--brand); font-weight: 600; border-bottom-color: var(--brand); }
+    .wrap { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1.5rem 2.5rem; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    h2 { font-size: 1.05rem; margin: 1.75rem 0 0.5rem; color: #111; }
+    p { margin: 0.65rem 0; }
+    ul { margin: 0.5rem 0 0.5rem 1.1rem; padding: 0; }
+    li { margin: 0.35rem 0; }
+    a { color: var(--brand); }
+    .note { background: #f5f7f9; border-left: 3px solid var(--brand); padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.92rem; }
+    .url-line { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.88rem; word-break: break-all; background: #f5f7f9; padding: 0.5rem 0.65rem; border-radius: 6px; margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="/" aria-label="ЭПОС — на главную"><img src="assets/logo.png" alt="ЭПОС" width="120" height="34"></a>
+      <nav class="nav-links" aria-label="Разделы">
+        <a href="/">Условия</a>
+        <a href="privacy_policy.html">Конфиденциальность</a>
+        <a href="support.html" aria-current="page">Support URL</a>
+        <a href="marketing.html">Marketing URL</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+    <h1>Support URL (App Store)</h1>
+    <p class="meta">Рекомендуемые значения для поля <strong>Support URL</strong> в App Store Connect. Указывайте только ссылки, которые открываются в браузере по протоколу <strong>https://</strong>.</p>
+
+    <div class="note">
+      В приложении на экране «Контакты» есть действия, которые открывают не веб-страницу (<code>tel:</code>, <code>max://</code>, <code>tg://</code> и т.п.) — такие схемы <strong>нельзя</strong> вставлять в поля URL в App Store. Телефон, MAX, прямые ссылки в мессенджеры остаются внутри приложения; в Store указываются только <code>https://</code> адреса.
+    </div>
+
+    <h2>Основной вариант</h2>
+    <p>Официальный сайт — тот же ресурс, что открывается по кнопке «эпос.com» в разделе «Контакты» (внутри приложения — во встроенном браузере). Для Support URL логично указать именно его:</p>
+    <p class="url-line"><a href="https://xn--n1abh9b.com">https://xn--n1abh9b.com</a></p>
+    <p>Это punycode-представление домена <strong>эпос.com</strong>; по смыслу это один и тот же сайт.</p>
+
+    <h2>Альтернатива</h2>
+    <p>Если сайт пока минимальный, а основная оперативная поддержка идёт через открытый Telegram-канал, допустимо указать его как Support URL (или продублировать логику в примечаниях к приложению):</p>
+    <p class="url-line"><a href="https://t.me/epos63">https://t.me/epos63</a></p>
+
+    <h2>Кратко</h2>
+    <ul>
+      <li><strong>Рекомендуется:</strong> <a href="https://xn--n1abh9b.com">https://xn--n1abh9b.com</a></li>
+      <li><strong>При необходимости:</strong> <a href="https://t.me/epos63">https://t.me/epos63</a></li>
+    </ul>
+  </div>
+</body>
+</html>
